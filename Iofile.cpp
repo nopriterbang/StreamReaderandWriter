@@ -10,4 +10,17 @@ int main() {
     ofstream outfile;
     // menunjuk ke sebuah nama file
     outfile.open("contohfile.txt");
+
+    cout << ">= Menulis file, \'q\' untuk keluar" << endl;
+
+    //unlimited loop untuk menulis
+    while(true) {
+        cout << "_ ";
+        // mendapatkan setiap karakter dalam satu baris
+        getline(cin, baris);
+        // loop akan berhenti jika anda mamasukan karakter q
+        if (baris == "q") break;
+        // menulis dan memasukan nilai dari 'baris' ke dalam file
+        outfile << baris << endl;
+    }
 }
